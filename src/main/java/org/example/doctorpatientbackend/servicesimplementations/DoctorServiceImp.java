@@ -1,5 +1,6 @@
 package org.example.doctorpatientbackend.servicesimplementations;
 
+import org.example.doctorpatientbackend.DTO.LoginDTO;
 import org.example.doctorpatientbackend.entities.Doctor;
 import org.example.doctorpatientbackend.exceptions.DoctorExceptions;
 import org.example.doctorpatientbackend.repository.DoctorRepo;
@@ -32,7 +33,7 @@ public class DoctorServiceImp implements DoctorServices {
     }
 
     @Override
-    public Doctor login(loginDTO logindto) throws DoctorExceptions {
+    public Doctor login(LoginDTO logindto) throws DoctorExceptions {
 
         Optional<Doctor> opt = docRepo.findByEmailAndPassword(logindto.getEmail(), logindto.getPassword());
         if(opt.isEmpty()) {

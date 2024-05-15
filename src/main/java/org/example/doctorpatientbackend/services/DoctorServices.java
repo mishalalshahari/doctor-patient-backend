@@ -1,5 +1,6 @@
 package org.example.doctorpatientbackend.services;
 
+import org.example.doctorpatientbackend.DTO.LoginDTO;
 import org.example.doctorpatientbackend.entities.Doctor;
 import org.example.doctorpatientbackend.exceptions.DoctorExceptions;
 
@@ -9,7 +10,7 @@ public interface DoctorServices {
 
     Doctor register(Doctor doctor) throws DoctorExceptions;
 
-    Doctor login(loginDTO logindto) throws DoctorExceptions;
+    Doctor login(LoginDTO logindto) throws DoctorExceptions;
 
     Doctor getDoctorEmail(String mail) throws DoctorExceptions;
 

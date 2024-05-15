@@ -2,6 +2,7 @@ package org.example.doctorpatientbackend.controllers;
 
 
 import jakarta.validation.Valid;
+import org.example.doctorpatientbackend.DTO.LoginDTO;
 import org.example.doctorpatientbackend.entities.Doctor;
 import org.example.doctorpatientbackend.services.DoctorServices;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,7 +26,7 @@ public class DoctorController {
     }
 
     @PostMapping("/login")
-    public ResponseEntity<Doctor> registerHandler(@Valid @RequestBody loginDTO logindto){
+    public ResponseEntity<Doctor> registerHandler(@Valid @RequestBody LoginDTO logindto){
         Doctor docObject = docService.login(logindto);
         return new ResponseEntity<>(docObject, HttpStatus.CREATED);
 
