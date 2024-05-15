@@ -39,13 +39,13 @@ public class DoctorController {
 
     }
     @GetMapping("/{email}")
-    public ResponseEntity<Doctor> getByEmailHandler(@Valid @RequestParam String email){
+    public ResponseEntity<Doctor> getByEmailHandler(@RequestParam String email){
         Doctor docObject = docService.getDoctorEmail(email);
         return new ResponseEntity<Doctor>(docObject, HttpStatus.OK);
 
     }
     @DeleteMapping("/{email}")
-    public ResponseEntity<Doctor> deleteByEmailHandler(@Valid @RequestParam String email){
+    public ResponseEntity<Doctor> deleteByEmailHandler(@RequestParam String email){
         Doctor docObject = docService.deleteByEmail(email);
         return new ResponseEntity<Doctor>(docObject, HttpStatus.OK);
 

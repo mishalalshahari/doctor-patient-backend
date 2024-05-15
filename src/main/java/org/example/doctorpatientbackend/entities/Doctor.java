@@ -25,6 +25,7 @@ public class Doctor {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer doctorId;
 
+
     @Length(min = 3, message = "Should be atleast 3 characters!")
     @Pattern(regexp = "^[a-zA-Z\\s]+$", message = "Name must not contain any numbers and special characters!")
     private String name;
@@ -43,4 +44,67 @@ public class Doctor {
 
     @Enumerated(EnumType.STRING)
     private Speciality speciality;
+
+    // Getter and Setter methods for doctorId
+    public Integer getDoctorId() {
+        return doctorId;
+    }
+
+    public void setDoctorId(Integer doctorId) {
+        this.doctorId = doctorId;
+    }
+
+    // Getter and Setter methods for name
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    // Getter and Setter methods for city
+    public City getCity() {
+        return city;
+    }
+
+    public void setCity(City city) {
+        this.city = city;
+    }
+
+    // Getter and Setter methods for email
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    // Getter and Setter methods for password
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    // Getter and Setter methods for phoneNo
+    public String getPhoneNo() {
+        return phoneNo;
+    }
+
+    public void setPhoneNo(String phoneNo) {
+        this.phoneNo = phoneNo;
+    }
+
+    // Getter and Setter methods for speciality
+    public Speciality getSpeciality() {
+        return speciality;
+    }
+
+    public void setSpeciality(Speciality speciality) {
+        this.speciality = speciality;
+    }
 }

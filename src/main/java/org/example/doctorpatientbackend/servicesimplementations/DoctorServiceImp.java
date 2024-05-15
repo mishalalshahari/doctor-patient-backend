@@ -19,6 +19,7 @@ public class DoctorServiceImp implements DoctorServices {
 
     @Override
     public Doctor register(Doctor doctor) throws DoctorExceptions {
+
         Optional<Doctor> emailCheck = docRepo.findByEmail(doctor.getEmail());
         Optional<Doctor> phoneCheck = docRepo.findByPhoneNo(doctor.getPhoneNo());
         if(phoneCheck.isPresent()) {
