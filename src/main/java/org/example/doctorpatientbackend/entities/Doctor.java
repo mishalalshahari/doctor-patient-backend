@@ -45,7 +45,7 @@ public class Doctor {
     @Enumerated(EnumType.STRING)
     private Speciality speciality;
 
-    // Getter and Setter methods for doctorId
+    // custom getter and setter in case of Lombok failure
     public Integer getDoctorId() {
         return doctorId;
     }
@@ -54,7 +54,6 @@ public class Doctor {
         this.doctorId = doctorId;
     }
 
-    // Getter and Setter methods for name
     public String getName() {
         return name;
     }
@@ -63,7 +62,6 @@ public class Doctor {
         this.name = name;
     }
 
-    // Getter and Setter methods for city
     public City getCity() {
         return city;
     }
@@ -72,7 +70,6 @@ public class Doctor {
         this.city = city;
     }
 
-    // Getter and Setter methods for email
     public String getEmail() {
         return email;
     }
@@ -81,7 +78,6 @@ public class Doctor {
         this.email = email;
     }
 
-    // Getter and Setter methods for password
     public String getPassword() {
         return password;
     }
@@ -90,7 +86,6 @@ public class Doctor {
         this.password = password;
     }
 
-    // Getter and Setter methods for phoneNo
     public String getPhoneNo() {
         return phoneNo;
     }
@@ -99,7 +94,6 @@ public class Doctor {
         this.phoneNo = phoneNo;
     }
 
-    // Getter and Setter methods for speciality
     public Speciality getSpeciality() {
         return speciality;
     }

@@ -42,7 +42,7 @@ public class Patient {
     @Enumerated(EnumType.STRING)
     private Symptoms symptoms;
 
-    // Getter and Setter methods for patientId
+    // custom getter and setter in case of Lombok failure
     public Integer getPatientId() {
         return patientId;
     }
@@ -51,7 +51,6 @@ public class Patient {
         this.patientId = patientId;
     }
 
-    // Getter and Setter methods for name
     public String getName() {
         return name;
     }
@@ -60,7 +59,6 @@ public class Patient {
         this.name = name;
     }
 
-    // Getter and Setter methods for city
     public String getCity() {
         return city;
     }
@@ -69,7 +67,6 @@ public class Patient {
         this.city = city;
     }
 
-    // Getter and Setter methods for email
     public String getEmail() {
         return email;
     }
@@ -78,7 +75,6 @@ public class Patient {
         this.email = email;
     }
 
-    // Getter and Setter methods for password
     public String getPassword() {
         return password;
     }
@@ -87,7 +83,6 @@ public class Patient {
         this.password = password;
     }
 
-    // Getter and Setter methods for phoneNo
     public String getPhoneNo() {
         return phoneNo;
     }
@@ -96,7 +91,6 @@ public class Patient {
         this.phoneNo = phoneNo;
     }
 
-    // Getter and Setter methods for symptoms
     public Symptoms getSymptoms() {
         return symptoms;
     }

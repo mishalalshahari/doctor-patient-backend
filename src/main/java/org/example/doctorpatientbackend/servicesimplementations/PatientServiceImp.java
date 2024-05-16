@@ -29,7 +29,7 @@ public class PatientServiceImp implements PatientServices {
         Optional<Patient> emailCheck = patRepo.findByEmail(patient.getEmail());
         Optional<Patient> phoneCheck = patRepo.findByPhoneNo(patient.getPhoneNo());
         if (emailCheck.isPresent()) {
-            throw new PatientExceptions("Patient already exists with the email:" + patient.getEmail());
+            throw new PatientExceptions("Patient already exists with the email: " + patient.getEmail());
         }else if(phoneCheck.isPresent()) {
             throw new PatientExceptions("Patient already exists with the phone number: " + patient.getPhoneNo());
         }
@@ -43,7 +43,7 @@ public class PatientServiceImp implements PatientServices {
         Optional<Patient> opt = patRepo.findByEmailAndPassword(logindto.getEmail(), logindto.getPassword());
         if (opt.isEmpty()) {
             throw new PatientExceptions(
-                    "Patient does not exist with the email:" + logindto.getEmail() + "or you have enter wrong details!");
+                    "Patient does not exist with the email: " + logindto.getEmail() + " or you have enter wrong details!");
         } else {
             return opt.get();
         }
@@ -54,7 +54,7 @@ public class PatientServiceImp implements PatientServices {
     public Patient getPatientEmail(String email) throws PatientExceptions {
         Optional<Patient> opt = patRepo.findByEmail(email);
         if (opt.isEmpty()) {
-            throw new PatientExceptions("patient does not exist with the email:" + email);
+            throw new PatientExceptions("patient does not exist with the email: " + email);
         } else {
             return opt.get();
         }
@@ -64,7 +64,7 @@ public class PatientServiceImp implements PatientServices {
     public List<Patient> getAllPatient() throws PatientExceptions {
         List<Patient> list = patRepo.findAll();
         if (list.isEmpty()) {
-            throw new PatientExceptions("Patient does not exist ");
+            throw new PatientExceptions("Patient does not exists!");
         } else {
             return list;
         }
@@ -74,7 +74,7 @@ public class PatientServiceImp implements PatientServices {
     public Patient deleteByEmail(String email) throws PatientExceptions {
         Optional<Patient> opt = patRepo.findByEmail(email);
         if (opt.isEmpty()) {
-            throw new PatientExceptions("Patient does not exist with the email: " + email);
+            throw new PatientExceptions("Patient does not exists with the email: " + email);
         } else {
             Patient p = opt.get();
             patRepo.delete(p);
@@ -87,7 +87,7 @@ public class PatientServiceImp implements PatientServices {
         Optional<Patient> opt = patRepo.findByEmail(email);
 
         if (opt.isEmpty()) {
-            throw new PatientExceptions("Patient does not exist with the email: " + email);
+            throw new PatientExceptions("Patient does not exists with the email: " + email);
         } else {
             Patient p = opt.get();
             Symptoms symptoms = p.getSymptoms();
@@ -107,31 +107,31 @@ public class PatientServiceImp implements PatientServices {
                             output.add(doctor);
                         } else {
                             throw new DoctorExceptions(
-                                    "There isn’t any doctor present at your location for your symptom");
+                                    "There isn’t any doctor present at your location for your symptom.");
                         }
                     } else if (symptoms.toString().equals("Dysmenorrhea")) {
                         if (doctor.getSpeciality().toString().equals("Gynecology")) {
                             output.add(doctor);
                         } else {
                             throw new DoctorExceptions(
-                                    "There isn’t any doctor present at your location for your symptom");
+                                    "There isn’t any doctor present at your location for your symptom.");
                         }
                     } else if (symptoms.toString().equals("SkinInfection") || symptoms.toString().equals("SkinBurn")) {
                         if (doctor.getSpeciality().toString().equals("Dermatology")) {
                             output.add(doctor);
                         } else {
                             throw new DoctorExceptions(
-                                    "There isn’t any doctor present at your location for your symptom");
+                                    "There isn’t any doctor present at your location for your symptom.");
                         }
                     } else if (symptoms.toString().equals("EarPain")) {
                         if (doctor.getSpeciality().toString().equals("ENT")) {
                             output.add(doctor);
                         } else {
                             throw new DoctorExceptions(
-                                    "There isn’t any doctor present at your location for your symptom");
+                                    "There isn’t any doctor present at your location for your symptom.");
                         }
                     } else {
-                        throw new DoctorExceptions("There isn’t any doctor present at your location for your symptom");
+                        throw new DoctorExceptions("There isn’t any doctor present at your location for your symptom.");
                     }
                 }
                 System.out.println(output);

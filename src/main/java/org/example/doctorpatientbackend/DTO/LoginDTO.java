@@ -17,22 +17,19 @@ public class LoginDTO {
 
     private String password;
 
-    // Getter method for email
+    // custom getter and setter in case of Lombok failure
     public String getEmail() {
         return email;
     }
 
-    // Setter method for email
     public void setEmail(String email) {
         this.email = email;
     }
 
-    // Getter method for password
     public String getPassword() {
         return password;
     }
 
-    // Setter method for password
     public void setPassword(String password) {
         this.password = password;
     }
