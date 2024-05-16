@@ -6,4 +6,5 @@ public class DoctorExceptions extends RuntimeException{
     public DoctorExceptions(String mess) {
         super(mess);
     }
+
 }

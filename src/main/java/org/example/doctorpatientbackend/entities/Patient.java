@@ -41,4 +41,67 @@ public class Patient {
 
     @Enumerated(EnumType.STRING)
     private Symptoms symptoms;
+
+    // Getter and Setter methods for patientId
+    public Integer getPatientId() {
+        return patientId;
+    }
+
+    public void setPatientId(Integer patientId) {
+        this.patientId = patientId;
+    }
+
+    // Getter and Setter methods for name
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    // Getter and Setter methods for city
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    // Getter and Setter methods for email
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    // Getter and Setter methods for password
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    // Getter and Setter methods for phoneNo
+    public String getPhoneNo() {
+        return phoneNo;
+    }
+
+    public void setPhoneNo(String phoneNo) {
+        this.phoneNo = phoneNo;
+    }
+
+    // Getter and Setter methods for symptoms
+    public Symptoms getSymptoms() {
+        return symptoms;
+    }
+
+    public void setSymptoms(Symptoms symptoms) {
+        this.symptoms = symptoms;
+    }
 }
